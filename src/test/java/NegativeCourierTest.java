@@ -1,4 +1,5 @@
 import io.restassured.response.ValidatableResponse;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +16,13 @@ public class NegativeCourierTest {
         courierClient = new CourierClient();
         courier = CourierGenerator.getDefault();
     }
+    @After
+    public void after() {
+        if (courierClient.login(Creds.from(courier)).extract().path("id") != null) {
+            courierClient.delete(courierClient.login(Creds.from(courier)).extract().path("id"));
+        }
+    }
+
     @Test
     public void createCourierWihoutLogin() {
         ValidatableResponse response = courierClient.create(Courier.builder().password("123").firstName("Вася").build());
