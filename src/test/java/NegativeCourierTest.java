@@ -1,3 +1,7 @@
+import courier.Courier;
+import courier.CourierClient;
+import courier.CourierGenerator;
+import courier.Creds;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;

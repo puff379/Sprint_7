@@ -1,4 +1,7 @@
 import io.restassured.response.ValidatableResponse;
+import order.Order;
+import order.OrderClient;
+import order.OrderGenerator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

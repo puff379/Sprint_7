@@ -1,3 +1,5 @@
+package courier;
+
 public class CourierGenerator {
     public static Courier getDefault(){
         return new Courier("Русhkhjhgnmbbnmoн","667","Брат");

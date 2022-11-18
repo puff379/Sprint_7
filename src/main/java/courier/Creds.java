@@ -1,3 +1,5 @@
+package courier;
+
 import lombok.*;
 
 @Getter

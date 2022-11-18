@@ -1,4 +1,5 @@
 import io.restassured.response.ValidatableResponse;
+import order.OrderClient;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
